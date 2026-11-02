@@ -1,0 +1,112 @@
+  table_name  | count 
+--------------+-------
+ customers    |  3000
+ applications |  5000
+ loans        |  2608
+ repayments   | 48263
+(4 rows)
+
+               check_name                | exceptions 
+-----------------------------------------+------------
+ Partial payment marked Paid on Time     |          5
+ Loan disbursed before application       |          4
+ Approved below minimum bureau score     |          3
+ Approval and loan do not match          |          0
+ EMI does not match formula              |          0
+ Payment after business date             |          0
+ Repayment customer differs from loan    |          0
+ Unpaid instalment with payment recorded |          0
+(8 rows)
+
+    loan_type     | applications | approved | approval_rate_pct 
+------------------+--------------+----------+-------------------
+ Consumer Durable |         1009 |      620 |              61.8
+ Personal Loan    |         1446 |      811 |              56.7
+ Auto Loan        |          943 |      511 |              54.8
+ Business Loan    |          721 |      306 |              42.9
+ Home Loan        |          881 |      360 |              41.1
+(5 rows)
+
+     rejection_reason     | rejected | share_pct 
+--------------------------+----------+-----------
+ High FOIR                |     1831 |      78.0
+ Low Credit Score         |      301 |      12.8
+ Incomplete Documentation |      127 |       5.4
+ Unstable Employment      |       89 |       3.8
+(4 rows)
+
+ active_loans | outstanding_cr | npa_loans | gnpa_pct | par30_pct 
+--------------+----------------+-----------+----------+-----------
+         1750 |         110.98 |        91 |     3.96 |      4.59
+(1 row)
+
+ asset_class | loans | outstanding_lakh | share_of_book_pct 
+-------------+-------+------------------+-------------------
+ Standard    |  1609 |          10401.6 |             93.73
+ SMA-0       |    36 |            187.0 |              1.69
+ SMA-1       |     8 |             45.9 |              0.41
+ SMA-2       |     6 |             23.6 |              0.21
+ NPA         |    91 |            439.8 |              3.96
+(5 rows)
+
+    loan_type     | active_loans | npa_loans | gnpa_pct | par30_pct 
+------------------+--------------+-----------+----------+-----------
+ Consumer Durable |          128 |        20 |    12.22 |     12.55
+ Business Loan    |          265 |        21 |    11.22 |     12.96
+ Personal Loan    |          522 |        34 |    10.36 |     10.53
+ Auto Loan        |          475 |         9 |     2.15 |      4.07
+ Home Loan        |          360 |         7 |     2.07 |      2.29
+(5 rows)
+
+ score_band | loans | ever_30plus_pct | npa_now_pct 
+------------+-------+-----------------+-------------
+ A          |   831 |             5.9 |         1.9
+ B          |   862 |            13.5 |         3.4
+ C          |   695 |            18.4 |         5.0
+ D          |   220 |            30.9 |         5.0
+(4 rows)
+
+ vintage | loans | ever_30plus_pct | npa_now_pct 
+---------+-------+-----------------+-------------
+ 2023-H1 |   423 |            19.1 |         4.7
+ 2023-H2 |   405 |            15.8 |         4.4
+ 2024-H1 |   378 |            18.0 |         3.7
+ 2024-H2 |   361 |            14.4 |         4.2
+ 2025-H1 |   294 |            17.0 |         6.1
+ 2025-H2 |   306 |            11.1 |         1.6
+ 2026-H1 |   300 |             4.0 |         0.3
+ 2026-H2 |   141 |             0.0 |         0.0
+(8 rows)
+
+         branch         | active_loans | gnpa_pct | risk_rank 
+------------------------+--------------+----------+-----------
+ Sitabuldi Branch       |          103 |     7.85 |         1
+ Banjara Hills Branch   |          148 |     7.34 |         2
+ Koramangala Branch     |          228 |     5.57 |         3
+ T Nagar Branch         |          163 |     4.15 |         4
+ FC Road Branch         |          202 |     3.60 |         5
+ Connaught Place Branch |          251 |     3.11 |         6
+ Salt Lake Branch       |          174 |     2.93 |         7
+ CG Road Branch         |          146 |     2.81 |         8
+ Gondia Main Branch     |           63 |     2.60 |         9
+ Andheri Branch         |          272 |     2.02 |        10
+(10 rows)
+
+  loan_id   | customer_name |    loan_type     |         branch         | asset_class | current_dpd | outstanding 
+------------+---------------+------------------+------------------------+-------------+-------------+-------------
+ LOAN-71400 | Isha Nair     | Business Loan    | Connaught Place Branch | SMA-2       |          85 |   317077.76
+ LOAN-71921 | Pranav Joshi  | Personal Loan    | CG Road Branch         | SMA-2       |          80 |   205179.81
+ LOAN-71253 | Imran Das     | Business Loan    | Koramangala Branch     | SMA-2       |          79 |   590668.24
+ LOAN-72451 | Yash Mehta    | Auto Loan        | FC Road Branch         | SMA-2       |          77 |   445000.00
+ LOAN-70535 | Amit Iyer     | Auto Loan        | CG Road Branch         | SMA-2       |          77 |   199099.56
+ LOAN-70610 | Aditya Mehta  | Business Loan    | Gondia Main Branch     | SMA-2       |          71 |   603634.24
+ LOAN-71223 | Manoj Das     | Home Loan        | Koramangala Branch     | SMA-1       |          59 |  1603306.92
+ LOAN-70761 | Farhan Nair   | Auto Loan        | Salt Lake Branch       | SMA-1       |          59 |   110761.11
+ LOAN-72324 | Kiran Gupta   | Auto Loan        | Salt Lake Branch       | SMA-1       |          56 |   292278.59
+ LOAN-72362 | Kavita Iyer   | Auto Loan        | Salt Lake Branch       | SMA-1       |          55 |  1055348.82
+ LOAN-70842 | Rohit Reddy   | Auto Loan        | Banjara Hills Branch   | SMA-1       |          52 |   854206.01
+ LOAN-70590 | Farhan Iyer   | Auto Loan        | Connaught Place Branch | SMA-1       |          48 |   303904.62
+ LOAN-71894 | Vikram Jain   | Business Loan    | Koramangala Branch     | SMA-1       |          33 |   344673.45
+ LOAN-72217 | Karan Reddy   | Consumer Durable | Gondia Main Branch     | SMA-1       |          31 |    24883.55
+(14 rows)
+

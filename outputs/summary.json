@@ -1,0 +1,58 @@
+{
+  "applications": 5000,
+  "approval_rate_pct": 52.6,
+  "top_rejection_reason": "High FOIR",
+  "top_rejection_share_pct": 78.0,
+  "loans_disbursed": 2608,
+  "active_loans": 1750,
+  "outstanding_crore": 110.98,
+  "npa_loans": 91,
+  "gnpa_pct": 3.96,
+  "par30_pct": 4.59,
+  "sma1_sma2_loans": 14,
+  "band_ever30_pct": {
+    "A": 5.9,
+    "B": 13.5,
+    "C": 18.4,
+    "D": 30.9
+  },
+  "band_npa_pct": {
+    "A": 1.9,
+    "B": 3.4,
+    "C": 5.0,
+    "D": 5.0
+  },
+  "band_d_vs_a_ever30_ratio": 5.2,
+  "scorecard_auc_ever30": 0.669,
+  "gnpa_by_product_pct": {
+    "Auto Loan": 2.15,
+    "Business Loan": 11.22,
+    "Consumer Durable": 12.22,
+    "Home Loan": 2.07,
+    "Personal Loan": 10.36
+  },
+  "npa_count_rate_by_product_pct": {
+    "Auto Loan": 1.9,
+    "Business Loan": 7.9,
+    "Consumer Durable": 15.6,
+    "Home Loan": 1.9,
+    "Personal Loan": 6.5
+  },
+  "npa_of_all_disbursed_by_product_pct": {
+    "Auto Loan": 1.8,
+    "Business Loan": 6.9,
+    "Consumer Durable": 3.2,
+    "Home Loan": 1.9,
+    "Personal Loan": 4.2
+  },
+  "closed_loans_by_product": {
+    "Auto Loan": 36,
+    "Business Loan": 41,
+    "Consumer Durable": 492,
+    "Home Loan": 0,
+    "Personal Loan": 289
+  },
+  "worst_branch": "Sitabuldi Branch",
+  "worst_branch_gnpa_pct": 7.85,
+  "worst_branch_npa_loans": 7
+}
